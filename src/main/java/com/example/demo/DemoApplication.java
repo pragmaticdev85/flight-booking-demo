@@ -9,9 +9,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @EnableWebMvc
 @EnableJpaRepositories("com.example.demo")
 public class DemoApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
 }

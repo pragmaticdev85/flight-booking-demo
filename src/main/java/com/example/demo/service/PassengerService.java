@@ -9,9 +9,11 @@ import java.util.Set;
 public class PassengerService {
 
     private static Set<String> allowed = Set.of("Alice", "John", "Priya");
+
     public Set<String> allowList() {
         return allowed;
     }
+
     public boolean isValidPassenger(final String passengerName) {
         if (StringUtils.isBlank(passengerName)) return false;
         return allowed.contains(passengerName);

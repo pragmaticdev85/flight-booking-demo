@@ -24,7 +24,8 @@ public class PassengerVerificationController {
     public PassengerValidationResponse isValid(@RequestBody @Valid PassengerDetails passengerDetails) {
         PassengerValidationResponse passengerValidationResponse = PassengerValidationResponse.builder().build();
         boolean isValid = passengerService.isValidPassenger(passengerDetails.getName());
-        if (isValid) passengerValidationResponse.setSuccessMsg(String.format("Passenger -> [%s] is valid", passengerDetails.getName()));
+        if (isValid)
+            passengerValidationResponse.setSuccessMsg(String.format("Passenger -> [%s] is valid", passengerDetails.getName()));
         else {
             passengerValidationResponse.setErrorMsg(String.format("Passenger -> [%s] is not valid", passengerDetails.getName()));
         }
